@@ -7,15 +7,17 @@ import os
 
 # Acquire Function:
 def acquire_store_data():
+    '''Function to read store data from a csv or from the API'''
     if os.path.isfile('store_sales_items.csv') == False:
         df = get_store_data()
-        df.to_csv('store_sales_items.csv',index = False)
     else:
         df = pd.read_csv('store_sales_items.csv')
     return df
 
 # Get the store data:
 def get_store_data():
+    '''Function to acquire store data from api'''
+
     base_url = 'https://python.zgulde.net'
 
 
