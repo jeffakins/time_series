@@ -80,3 +80,17 @@ def get_store_data():
     sales_stores_items.to_csv('store_sales_items.csv')        # create csv file
 
     return sales_stores_items
+
+
+# Open Power Systems Data for Germany
+def get_opsd_data():
+    '''Function to get the Open Power Systems Data for Germany'''
+
+    url = 'https://raw.githubusercontent.com/jenfly/opsd/master/opsd_germany_daily.csv'
+    
+    if os.path.isfile('opsd_germany_daily.csv') == False:
+        df = pd.read_csv(url)
+        df.to_csv('opsd_germany_daily.csv')
+    else:
+        df = pd.read_csv('opsd_germany_daily.csv')
+    return df
