@@ -4,3 +4,5 @@ env.py
 __pycache__
 store_sales_items.csv
 opsd_germany_daily.csv
+GlobalLandTemperaturesByMajorCity.csv
+GlobalLandTemperaturesByState.csv
